@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { VehiculosModule } from './vehiculos/vehiculos.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BannerComponent } from './banner/banner.component';
+import { VehiculosListComponent } from './vehiculos/vehiculos-list/vehiculos-list.component';
 
 @NgModule({
   declarations: [		
     AppComponent,
       NavbarComponent,
-      BannerComponent
+      BannerComponent,
+      VehiculosListComponent
    ],
   imports: [
     BrowserModule,

@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Vehiculo } from './vehiculo';
-import { VehiculosService } from './vehiculos.service';
+import { VehiculosService } from '../vehiculos.service';
+import { Vehiculo } from '../vehiculo';
 
 @Component({
-  selector: 'app-vehiculos',
-  templateUrl: './vehiculos.component.html',
-  styleUrls: ['./vehiculos.component.css']
+  selector: 'app-vehiculos-list',
+  templateUrl: './vehiculos-list.component.html',
+  styleUrls: ['./vehiculos-list.component.css']
 })
-export class VehiculosComponent implements OnInit {
+export class VehiculosListComponent implements OnInit {
 
   constructor(private vehiculeService: VehiculosService) { }
   vehicles: Array<Vehiculo> = []
@@ -23,7 +23,7 @@ export class VehiculosComponent implements OnInit {
   calculateVehiclesByMarca() {
     this.vehiclesByMarca = {}; 
     if (this.vehicles.length === 0) {
-      console.log('No se encontraron vehículos.'); // log
+      // log
     }
     for (const vehicle of this.vehicles) {
       if (this.vehiclesByMarca[vehicle.marca]) {
