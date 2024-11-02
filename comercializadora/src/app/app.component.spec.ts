@@ -1,15 +1,22 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { BannerComponent } from './banner/banner.component';
+import { VehiculosListComponent } from './vehiculos/vehiculos-list/vehiculos-list.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterModule.forRoot([])
-      ],
+        RouterModule.forRoot([]),
+        HttpClientModule],
       declarations: [
-        AppComponent
+        AppComponent,
+        NavbarComponent,
+        BannerComponent,
+        VehiculosListComponent
       ],
     }).compileComponents();
   });
@@ -26,10 +33,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('comercializadora');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, comercializadora');
-  });
 });

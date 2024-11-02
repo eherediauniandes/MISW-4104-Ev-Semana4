@@ -2,22 +2,24 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
-import { NavbarComponent } from './navbar.component';
+import { VehiculosListComponent } from './vehiculos-list.component';
 
-describe('NavbarComponent', () => {
-  let component: NavbarComponent;
-  let fixture: ComponentFixture<NavbarComponent>;
+describe('VehiculosListComponent', () => {
+  let component: VehiculosListComponent;
+  let fixture: ComponentFixture<VehiculosListComponent>;
 
   beforeEach((() => {
     TestBed.configureTestingModule({
-      declarations: [ NavbarComponent ]
+      imports: [HttpClientTestingModule ], 
+      declarations: [ VehiculosListComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NavbarComponent);
+    fixture = TestBed.createComponent(VehiculosListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
