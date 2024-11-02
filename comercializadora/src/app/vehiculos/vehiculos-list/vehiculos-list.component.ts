@@ -23,7 +23,7 @@ export class VehiculosListComponent implements OnInit {
   calculateVehiclesByMarca() {
     this.vehiclesByMarca = {}; 
     if (this.vehicles.length === 0) {
-      console.log('No se encontraron vehículos.'); // log
+      // log
     }
     for (const vehicle of this.vehicles) {
       if (this.vehiclesByMarca[vehicle.marca]) {
