@@ -1,0 +1,18 @@
+.border-container {
+    margin: 5mm 0; 
+    border-top: 1px solid grey; 
+    border-bottom: 1px solid grey; 
+    padding-top: 5mm; 
+    padding-bottom: 5mm; 
+  }
+
+.svg-container {
+    overflow: hidden; 
+  }
+
+.svg-container svg {
+    display: block; 
+    width: 100%;
+    height: auto;
+  }
+  
