@@ -30,3 +30,6 @@
     </table>
   </div>
 </div>
+<div *ngFor="let marca of (vehiclesByMarca | keyvalue)">
+  <p>Total {{ marca.key }}: {{ marca.value }}</p>
+</div>
